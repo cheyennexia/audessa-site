@@ -31,7 +31,7 @@
 })();
 
 /* ── Waitlist endpoint (same Edge Function as extension) ───── */
-const WAITLIST_ENDPOINT = 'https://supbhdpwvjlqwufvsmiv.functions.supabase.co/waitlist-submit';
+const WAITLIST_ENDPOINT = 'https://supbhdpwvjlqwufvsmiv.supabase.co/functions/v1/waitlist-submit';
 
 /* ── Email Modal ───────────────────────────────────────────── */
 let currentTier = 'upgrade';

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audessa — Turn articles into audio.</title>
+  <meta name="description" content="Audessa reads the current article aloud in Chrome today, with a floating player and reading-support controls. A mobile listening queue is coming soon." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260517e" />
+</head>
+<body>
+
+  <!-- ══ NAV ══════════════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand-group">
+        <img src="logo.png" alt="Audessa" class="nav-logo" />
+        <span class="nav-brand-name">Audessa</span>
+      </div>
+      <div class="nav-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#demo">Demo</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+  <section class="hero" id="top">
+    <!-- Warm bokeh background image -->
+    <div class="hero-bg"></div>
+    <div class="hero-content-wrap">
+      <div class="hero-content">
+        <!-- Headline -->
+        <h1 class="hero-h1 reveal">
+          Turn articles into <span class="text-coral">audio</span>.
+        </h1>
+
+        <!-- Description -->
+        <p class="hero-desc reveal">
+          Audessa reads the current article aloud in Chrome today, with a floating player,<br>
+          voice and speed controls, and reading-support tools.<br>
+          A mobile listening queue is coming soon.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="hero-cta reveal">
+          <a href="https://chromewebstore.google.com" target="_blank" rel="noopener" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+            Add to Chrome
+          </a>
+          <button class="btn-secondary" onclick="openModal('mobile-waitlist')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: oklch(0.25 0.02 260);"><rect width="10" height="18" x="7" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+            Join Mobile Waitlist
+          </button>
+        </div>
+
+        <!-- Trust bar -->
+        <div class="hero-trust reveal">
+          <span class="hero-trust-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+            No account required
+          </span>
+          <span class="hero-trust-sep">·</span>
+          <span class="hero-trust-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+            Browser voices
+          </span>
+          <span class="hero-trust-sep">·</span>
+          <span class="hero-trust-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+            Mobile queue soon
+          </span>
+          <span class="hero-trust-sep">·</span>
+          <span class="hero-trust-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Optional updates
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ AVAILABLE NOW: CHROME ════════════════════════════════ -->
+  <section class="available-now">
+    <div class="available-now-inner">
+      <div class="available-now-content">
+        <h2 class="available-now-h2 reveal">Available Now: Audessa for Chrome</h2>
+        <p class="available-now-desc reveal">
+          Open an article, click Audessa, and listen with a floating player. The Chrome extension extracts the main article text,
+          removes clutter, and gives you playback, voice, speed, and reading-support controls.
+        </p>
+        <div class="available-now-features reveal">
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Read the current article aloud</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Floating playback controls</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Speed and voice options</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Word highlighting and accessibility settings</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>No account required</span>
+          </div>
+        </div>
+        <div class="available-now-cta reveal">
+          <a href="https://chromewebstore.google.com" target="_blank" rel="noopener" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+            Add to Chrome
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ COMING SOON: ANDROID ══════════════════════════════════ -->
+  <section class="coming-soon">
+    <div class="coming-soon-inner">
+      <div class="coming-soon-content">
+        <h2 class="coming-soon-h2 reveal">Coming Soon: Mobile Listening Queue</h2>
+        <p class="coming-soon-desc reveal">
+          The mobile app will let you share article links to Audessa, build a queue, and listen later like a personal podcast.
+        </p>
+        <div class="coming-soon-features reveal">
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Share links from your phone</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Queue multiple articles</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Listen back-to-back</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Designed for walks, commutes, chores, and focused catch-up</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Join the mobile waitlist</span>
+          </div>
+        </div>
+        <div class="coming-soon-cta reveal">
+          <button class="btn-primary" onclick="openModal('mobile-waitlist')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="10" height="18" x="7" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+            Join Mobile Waitlist
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HOW IT WORKS ══════════════════════════════════════════════ -->
+  <section class="how" id="how-it-works">
+    <!-- Sound wave background -->
+    <div class="how-wave-bg"></div>
+    <div class="how-inner">
+      <!-- Heading -->
+      <div class="how-heading">
+        <h2 class="how-h2 reveal">How Audessa Works</h2>
+        <p class="how-subtitle reveal">Start listening in Chrome today. Build a mobile article queue soon.</p>
+      </div>
+      <!-- Cards grid -->
+      <div class="how-grid">
+
+        <!-- Card 1 -->
+        <div class="how-card reveal">
+          <span class="how-card-num">01</span>
+          <div class="how-card-icon">
+            <!-- Puzzle piece (install extension) icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-white"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"></path></svg>
+          </div>
+          <h3 class="how-card-h3">Open an article in Chrome</h3>
+          <p class="how-card-p">Go to an article you want to hear and click the Audessa extension.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="how-card reveal">
+          <span class="how-card-num">02</span>
+          <div class="how-card-icon">
+            <!-- File/document icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-white"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+          </div>
+          <h3 class="how-card-h3">Listen with the floating player</h3>
+          <p class="how-card-p">Press play, adjust speed, choose a voice, and use reading-support tools like word highlighting, larger text, and high contrast.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="how-card reveal">
+          <span class="how-card-num">03</span>
+          <div class="how-card-icon">
+            <!-- Headphones icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-white"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
+          </div>
+          <h3 class="how-card-h3">Join the mobile queue waitlist</h3>
+          <p class="how-card-p">Mobile is coming next: share links to Audessa, build a queue, and listen later from your phone.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ DEMO ══════════════════════════════════════════════════════ -->
+  <section class="demo" id="demo">
+    <div class="demo-inner">
+      <div class="demo-heading">
+        <h2 class="demo-h2 reveal">See Audessa in Action</h2>
+        <p class="demo-subtitle reveal">
+          See how Audessa turns the article you're reading into audio with a floating Chrome player.<br>
+          Mobile queue listening is coming soon.
+        </p>
+      </div>
+
+      <div class="demo-video-wrap reveal" aria-label="Audessa demo video placeholder">
+        <div class="demo-video-frame">
+          <div class="demo-video-glow"></div>
+          <div class="demo-video-play" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </div>
+          <div class="demo-video-copy">
+            <p class="demo-video-label">Demo video coming soon</p>
+            <p class="demo-video-desc">This space is reserved for the final Chrome walkthrough.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Browser Mockup with Article + Floating Audessa Player -->
+      <div class="browser-wrap reveal">
+        <div class="browser-mockup">
+          <!-- Chrome bar -->
+          <div class="browser-chrome">
+            <div class="browser-dots">
+              <div class="browser-dot dot-red"></div>
+              <div class="browser-dot dot-yellow"></div>
+              <div class="browser-dot dot-green"></div>
+            </div>
+            <div class="browser-bar">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              theatlantic.com/article/the-quiet-art-of-listening
+            </div>
+          </div>
+
+          <!-- Static article mockup with floating Audessa player -->
+          <div class="demo-stage">
+            <article class="demo-article">
+              <p class="demo-article-kicker">FEATURE · 7 MIN READ</p>
+              <h3 class="demo-article-title">The Quiet Art of Listening to What You're Reading</h3>
+              <p class="demo-article-byline">By Elena Mara · May 6, 2026</p>
+              <p class="demo-article-p">
+                We tend to think of reading as a duty — a tab to close, a newsletter to clear,
+                a paragraph to finish. But there is another way to relate to those words:
+                not as text to be conquered, <span class="demo-article-hl">but as voices to be heard</span>.
+                Audio lets the language slip past the eyes and into the ear, where
+                attention bends differently.
+              </p>
+              <p class="demo-article-p">
+                In the past year, a small group of readers has begun treating
+                their browsers like radios. A long essay becomes a walk around the block.
+                A research paper becomes the soundtrack to washing dishes. The article
+                does not change; only the way it is met.
+              </p>
+              <p class="demo-article-p demo-article-p-muted">
+                What follows is a quiet manual for that shift — part habit, part
+                technology, part permission to slow down.
+              </p>
+            </article>
+
+            <!-- Floating Audessa player overlay -->
+            <div class="demo-player" role="group" aria-label="Audessa floating player">
+              <div class="demo-player-head">
+                <div class="demo-player-brand">
+                  <span class="demo-player-logo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                  </span>
+                  <div class="demo-player-meta">
+                    <span class="demo-player-name">Audessa</span>
+                    <span class="demo-player-status">Reading current article</span>
+                  </div>
+                </div>
+                <span class="demo-player-live"><span class="demo-player-dot"></span>Live in Chrome</span>
+              </div>
+
+              <div class="demo-player-track">
+                <div class="demo-player-progress"></div>
+                <div class="demo-player-times">
+                  <span>02:14</span>
+                  <span>07:38</span>
+                </div>
+              </div>
+
+              <div class="demo-player-controls">
+                <button class="demo-pbtn" aria-label="Skip back" tabindex="-1" type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/></svg>
+                </button>
+                <button class="demo-pbtn demo-pbtn-play" aria-label="Pause" tabindex="-1" type="button">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+                </button>
+                <button class="demo-pbtn" aria-label="Skip forward" tabindex="-1" type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+                </button>
+
+                <div class="demo-pchip">
+                  <span class="demo-pchip-label">Speed</span>
+                  <span class="demo-pchip-value">1.25×</span>
+                </div>
+                <div class="demo-pchip">
+                  <span class="demo-pchip-label">Voice</span>
+                  <span class="demo-pchip-value">Grace
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-cta reveal">
+        <a href="https://chromewebstore.google.com" target="_blank" rel="noopener" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+          Add to Chrome
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- ══ PRICING ════════════════════════════════════════════════════ -->
+  <section class="pricing" id="pricing">
+    <div class="pricing-inner">
+      <div class="pricing-heading">
+        <h2 class="pricing-h2 reveal">Choose your listening experience</h2>
+        <p class="pricing-subtitle reveal">Start free with the Chrome reader today. Mobile queue and premium voices are coming soon.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <!-- Basic -->
+        <div class="pricing-card pricing-card-basic reveal">
+          <div class="pricing-card-icon" style="background: linear-gradient(135deg, oklch(0.65 0.18 155), oklch(0.55 0.15 155));">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-white"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg>
+          </div>
+          <div class="pricing-card-label pricing-card-label-green">Available Now</div>
+          <h3 class="pricing-card-name">Chrome Reader</h3>
+          <p class="pricing-card-type" style="color: oklch(0.55 0.18 155);">Browser TTS</p>
+          <div class="pricing-card-price">Free</div>
+          <div class="pricing-card-tag" style="background: rgba(52,211,153,0.15); color: oklch(0.55 0.18 155);">Available Now · No account required</div>
+          <div class="pricing-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="oklch(0.55 0.18 155)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="oklch(0.55 0.18 155)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(0,0,0,0.1)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(0,0,0,0.1)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(0,0,0,0.1)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span class="pricing-quality-label">Voice Quality</span>
+          </div>
+          <div class="pricing-meta-row">
+            <span class="pricing-meta-item">Pitch: Standard</span>
+            <span class="pricing-meta-item">Rate: 1.0×</span>
+          </div>
+          <p class="pricing-card-desc">Read the current article aloud in Chrome with a floating player. Built-in browser voices, no account required.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li><span class="feat-check feat-check-green"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Read current articles aloud in Chrome</li>
+            <li><span class="feat-check feat-check-green"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Browser voices</li>
+            <li><span class="feat-check feat-check-green"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Playback speed controls</li>
+            <li><span class="feat-check feat-check-green"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Word highlighting</li>
+            <li><span class="feat-check feat-check-green"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Accessibility settings</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener" class="btn-primary">Add to Chrome — Free</a>
+          </div>
+        </div>
+
+        <!-- Standard -->
+        <div class="pricing-card pricing-card-blue reveal">
+          <div class="pricing-card-icon" style="background: linear-gradient(135deg, oklch(0.55 0.18 250), oklch(0.48 0.18 260));">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-white"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <div class="pricing-card-label pricing-card-label-blue">Coming Soon</div>
+          <h3 class="pricing-card-name">Mobile Queue + Enhanced Voices</h3>
+          <p class="pricing-card-type" style="color: oklch(0.55 0.18 250);">Enhanced TTS · Mobile</p>
+          <div class="pricing-card-price" style="color: oklch(0.55 0.18 250);">Coming Soon</div>
+          <div class="pricing-card-tag" style="background: rgba(80,120,255,0.12); color: oklch(0.55 0.18 250);">Not available yet</div>
+          <div class="pricing-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="oklch(0.55 0.18 250)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="oklch(0.55 0.18 250)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="oklch(0.55 0.18 250)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(0,0,0,0.1)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(0,0,0,0.1)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span class="pricing-quality-label">Voice Quality</span>
+          </div>
+          <div class="pricing-meta-row">
+            <span class="pricing-meta-item">Pitch: Warm (+5%)</span>
+            <span class="pricing-meta-item">Rate: 1.0×</span>
+          </div>
+          <p class="pricing-card-desc">A planned upgrade: a mobile listening queue plus enhanced, more natural voices. Not available yet — join the waitlist to hear it first.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li><span class="feat-check feat-check-blue"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Planned: mobile listening queue</li>
+            <li><span class="feat-check feat-check-blue"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Planned: enhanced AI voices</li>
+            <li><span class="feat-check feat-check-blue"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Planned: share article links from your phone</li>
+            <li><span class="feat-check feat-check-blue"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Planned: listen back-to-back like a podcast</li>
+            <li><span class="feat-check feat-check-blue"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Waitlist priority</li>
+          </ul>
+          <div class="pricing-cta">
+            <button class="btn-primary" onclick="openModal('upgrade')">Get Notified</button>
+          </div>
+        </div>
+
+        <!-- Premium -->
+        <div class="pricing-card pricing-card-purple reveal">
+          <div class="pricing-card-icon" style="background: linear-gradient(135deg, oklch(0.55 0.18 300), oklch(0.48 0.18 310));">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-white"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="pricing-card-label pricing-card-label-purple">Coming Soon</div>
+          <h3 class="pricing-card-name">Advanced Listening</h3>
+          <p class="pricing-card-type" style="color: oklch(0.55 0.18 300);">Premium TTS</p>
+          <div class="pricing-card-price" style="color: oklch(0.55 0.18 300);">Coming Soon</div>
+          <div class="pricing-card-tag" style="background: rgba(160,80,255,0.12); color: oklch(0.55 0.18 300);">Not available yet</div>
+          <div class="pricing-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="oklch(0.55 0.18 300)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="oklch(0.55 0.18 300)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="oklch(0.55 0.18 300)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="oklch(0.55 0.18 300)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(0,0,0,0.1)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span class="pricing-quality-label">Voice Quality</span>
+          </div>
+          <div class="pricing-meta-row">
+            <span class="pricing-meta-item">Pitch: Premium (+10%)</span>
+            <span class="pricing-meta-item">Rate: 0.95×</span>
+          </div>
+          <p class="pricing-card-desc">A future tier exploring audiobook-quality, ultra-realistic narration and expressive delivery. Still in design — not available yet.</p>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li><span class="feat-check feat-check-purple"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Planned: ultra-realistic AI voices</li>
+            <li><span class="feat-check feat-check-purple"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Planned: expressive, emotional delivery</li>
+            <li><span class="feat-check feat-check-purple"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Planned: audiobook-quality narration</li>
+            <li><span class="feat-check feat-check-purple"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Planned: longer listening sessions</li>
+            <li><span class="feat-check feat-check-purple"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></span>Early access to new features</li>
+          </ul>
+          <div class="pricing-cta">
+            <button class="btn-primary" onclick="openModal('upgrade')">Get Notified</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="footer-brand">
+        <img src="logo.png" alt="Audessa" class="footer-logo" />
+        <span class="footer-brand-name">Audessa</span>
+      </a>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:hello@audessa.app">hello@audessa.app</a>
+      </div>
+      <p class="footer-privacy-note">Article text is processed in your browser for the Chrome reader. Email is only submitted if you join the waitlist.</p>
+      <p class="footer-copy">&copy; 2026 Audessa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ══ EMAIL MODAL ════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="emailModalOverlay" role="dialog" aria-modal="true" aria-label="Hear It First">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <h3 class="modal-title" id="modalTitle">Hear It First</h3>
+      <p class="modal-desc" id="modalDesc">Get early access to premium voices and new features. We'll only email you once.</p>
+      <div class="modal-form" id="emailForm">
+        <div class="modal-input-row">
+          <input type="email" class="modal-input" id="emailInput" placeholder="you@example.com" autocomplete="email" />
+          <button class="btn-primary modal-submit" id="emailSubmit">Notify Me</button>
+        </div>
+        <p class="modal-error" id="emailError" style="display:none;"></p>
+      </div>
+      <p class="modal-disclaimer">No spam, ever. Unsubscribe anytime.</p>
+      <div class="modal-success" id="emailSuccess">
+        <div class="modal-success-icon">&#10003;</div>
+        <p id="emailSuccessMsg">You're on the list! We'll be in touch.</p>
+        <button class="btn-primary modal-done" id="modalDone">Done</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="app.js"></script>
+</body>
+</html>

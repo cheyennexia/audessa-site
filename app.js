@@ -34,11 +34,11 @@
 const WAITLIST_ENDPOINT = 'https://supbhdpwvjlqwufvsmiv.supabase.co/functions/v1/waitlist-submit';
 
 /* ── Email Modal ───────────────────────────────────────────── */
-let currentTier = 'upgrade';
+let currentTier = 'mobile-waitlist';
 
-/* openModal — called via onclick="openModal('upgrade')" or onclick="openModal('mobile-waitlist')" */
+/* openModal — called via onclick="openModal('mobile-waitlist')" */
 window.openModal = function(tier) {
-  currentTier = tier || 'upgrade';
+  currentTier = tier || 'mobile-waitlist';
   const overlay  = document.getElementById('emailModalOverlay');
   const form     = document.getElementById('emailForm');
   const success  = document.getElementById('emailSuccess');
@@ -49,14 +49,8 @@ window.openModal = function(tier) {
   const desc     = document.getElementById('modalDesc');
   if (!overlay) return;
 
-  // Update modal copy based on tier
-  if (tier === 'mobile-waitlist') {
-    if (title) title.textContent = 'Join the Mobile Waitlist';
-    if (desc) desc.textContent = "Be first to know when Audessa for Android launches. We'll only email you once.";
-  } else {
-    if (title) title.textContent = 'Hear It First';
-    if (desc) desc.textContent = "Get early access to premium voices and new features. We'll only email you once.";
-  }
+  if (title) title.textContent = 'Join the Mobile Waitlist';
+  if (desc) desc.textContent = "Be first to know when Audessa for Android launches. We'll only email you once.";
 
   // Reset state
   if (form)    { form.style.display = ''; }

@@ -1529,6 +1529,26 @@ body {
 
 .coming-soon-cta {
   margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.mobile-survey-link {
+  color: oklch(0.4 0.02 260);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: oklch(0.5 0.02 260);
+  text-underline-offset: 4px;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+}
+
+.mobile-survey-link:hover {
+  color: oklch(0.62 0.18 20);
 }
 
 /* Responsive */
@@ -1546,6 +1566,11 @@ body {
   .available-now,
   .coming-soon {
     padding: 40px 20px;
+  }
+
+  .coming-soon-cta {
+    flex-direction: column;
+    gap: 16px;
   }
 }
 
